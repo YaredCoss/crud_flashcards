@@ -7,6 +7,7 @@ import 'crear_mazo.dart';
 import 'ver_mazos.dart';
 import 'crear_tarjeta.dart';
 import 'ver_tarjetas.dart';
+import 'login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,8 +29,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF1E1E1E),
         primaryColor: Colors.orange,
       ),
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
+        '/login': (context) => const LoginScreen(),
         '/': (context) => const Inicio(),
         '/crearMazo': (context) => const CrearMazo(),
         '/verMazos': (context) => const VerMazos(),
