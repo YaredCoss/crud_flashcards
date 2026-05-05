@@ -39,7 +39,6 @@ class _CrearMazoState extends State<CrearMazo> {
       await FirebaseFirestore.instance.collection('mazos').add({
         'nombre': nombre,
         'descripcion': descripcion,
-        'cantidadTarjetas': 0,
       });
     } else {
       await FirebaseFirestore.instance.collection('mazos').doc(id).update({
